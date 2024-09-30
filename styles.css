@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/background.jpg') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover;
+    animation: smoothScroll 30s infinite linear;
+}
+
+.text-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#floating-texts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white; 
+}
+
+.floating-text {
+    position: absolute;
+    animation: float 10s infinite; 
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
